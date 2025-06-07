@@ -50,7 +50,7 @@
     async function obterNumeros() {
       try {
         console.log('Iniciando requisição ao webhook...');
-        const response = await fetch('https://cf14-webhook.wpp-app.org/webhook/papomagnetico', {
+        const response = await fetch('https://cf14-webhook.wpp-app.org/webhook/gefferson01', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -74,13 +74,13 @@
       try {
         const numeros = await obterNumeros();
         const numeroAleatorio = numeros[Math.floor(Math.random() * numeros.length)];
-        const url = `https://api.whatsapp.com/send?phone=${5527996450198}&text=Oi,%20quero%20conversar%20com%20voce!`;
+        const url = `https://api.whatsapp.com/send?phone=${5527992019499}&text=Oi,%20quero%20conversar%20com%20voce!`;
         console.log('Redirecionando para:', url);
         window.location.href = url;
       } catch (error) {
         console.error('Erro ao obter os números ou redirecionar:', error);
         // URL de fallback em caso de erro
-        window.location.href = 'https://api.whatsapp.com/send?phone=5527996450198&text=Oi,%20tudo%20bem%20gata%20?';
+        window.location.href = 'https://api.whatsapp.com/send?phone=5527992019499&text=Oi,%20tudo%20bem%20gata%20?';
       }
     }
 
